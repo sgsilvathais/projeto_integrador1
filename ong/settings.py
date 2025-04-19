@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-h$mrnz#r#!&wz!s++!)vp=c16#5*-z=vj@px*#88fg)s(#6h=v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -127,7 +129,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-from pathlib import Path
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
@@ -143,3 +144,23 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = '/voluntarios/login/'
 LOGIN_REDIRECT_URL = '/voluntarios/lista/'  # pra onde ir depois do login
 LOGOUT_REDIRECT_URL = '/'  # pra onde ir depois do logout
+
+# Senha para envio de email automatico
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+
+# Sessão expira após 40 minutos (2400 segundos)
+SESSION_COOKIE_AGE = 2400
+# Sessão também expira se o navegador for fechado
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+# Django vai salvar todos os arquivos estáticos aqui quando rodar collectstatic
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+CSRF_COOKIE_SECURE = True  # Garante que o cookie CSRF seja enviado apenas via HTTPS
+SESSION_COOKIE_SECURE = True  # Garante que o cookie da sessão seja enviado apenas via HTTPS
+SECURE_SSL_REDIRECT = True  # Redireciona HTTP para HTTPS

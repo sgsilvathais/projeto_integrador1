@@ -11,7 +11,7 @@
             <img alt="..." class="d-block w-100" src="{% static 'img/sobre.jpg' %}">
             <div class="carousel-caption">
                 <h5>Em Defesa dos Animais</h5>
-                <p>Há mais de 6 anos em São José dos Campos focando na educação para conscientização dos cuidados dos animais.</p>
+                <p>Há quase 10 anos em São José dos Campos focando na educação para conscientização dos cuidados dos animais.</p>
                 <p><a class="btn btn-warning mt-3" href="#about">Aprenda Mais</a></p>
             </div>
         </div>
@@ -38,7 +38,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-12 col-12">
-                <div class="about-img"><img alt="" class="img-fluid" src="{% static 'img/PHOTO-2025-03-13-15-50-40.jpg' %}"></div>
+                <div class="about-img"><a href="https://linktr.ee/institutomarilugodoi" target="_blank"><img alt="" class="img-fluid" src="{% static 'img/PHOTO-2025-03-13-15-50-40.jpg' %}"></a></div>
             </div>
             <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
                 <div class="about-text">
@@ -68,32 +68,49 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-12 col-lg-4">
-                <div class="card text-white text-center bg-dark-blue pb-2">
-                    <div class="card-body">
-                        <i class="bi bi-shop-window"></i>
-                        <h3 class="card-title">Feira de Adoção</h3>
-                        <p class="lead">Partice dos trabalhos e atividades de nossas feiras e ajude os animais a encontrar um novo lar</p><a class="btn bg-warning text-dark" href="{% url 'cadastrar_voluntario' %}" role="button">Inscreva-se</a>
+            <div class="col-12 col-md-6 col-lg-3">
+                <a class="text-decoration-none" href="{% url 'cadastrar_voluntario' %}?area=Evento de adoção">
+                    <div class="card card-hover text-white text-center bg-dark-blue pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-shop-window"></i>
+                            <h3 class="card-title">Evento de Adoção</h3>
+                            <p class="lead">Partice dos trabalhos e atividades de nossos eventos e ajude os animais a encontrar um novo lar</p><span class="btn bg-warning text-dark">Inscreva-se</span>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
-            <div class="col-12 col-md-12 col-lg-4">
-                <div class="card text-white text-center bg-dark-blue pb-2">
-                    <div class="card-body">
-                        <i class="bi bi-scissors"></i>
-                        <h3 class="card-title">Cuidado e Bem-Estar</h3>
-                        <p class="lead">Ajude-nos com banho, tosa, lares temporários e outras formas de cuidados</p><a class="btn bg-warning text-dark" href="{% url 'cadastrar_voluntario' %}" role="button">Inscreva-se</a>
+            <div class="col-12 col-md-6 col-lg-3">
+                <a class="text-decoration-none" href="{% url 'cadastrar_voluntario' %}?area=Cuidados e Bem-Estar">
+                    <div class="card card-hover text-white text-center bg-dark-blue pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-scissors"></i>
+                            <h3 class="card-title">Cuidado e Bem-Estar</h3>
+                            <p class="lead">Ajude-nos com banho, tosa, lares temporários e outras formas de cuidados</p><span class="btn bg-warning text-dark">Inscreva-se</span>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
-            <div class="col-12 col-md-12 col-lg-4">
-                <div class="card text-white text-center bg-dark-blue pb-2">
-                    <div class="card-body">
-                        <i class="bi bi-clipboard-check"></i>
-                        <h3 class="card-title">Outras Tarefas</h3>
-                        <p class="lead">Não pode ajudar diretamente? Inscreva-se e veja outras formas de ajudar</p><a class="btn bg-warning text-dark" href="{% url 'cadastrar_voluntario' %}" role="button">Inscreva-se</a>
+            <div class="col-12 col-md-6 col-lg-3">
+                <a class="text-decoration-none" href="{% url 'cadastrar_voluntario' %}?area=Associado">
+                    <div class="card card-hover text-white text-center bg-dark-blue pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-person-circle"></i>
+                            <h3 class="card-title">Associe-se</h3>
+                            <p class="lead">Com apenas 1 real por dia você ajuda a salvar a vida dos bichinhos abandonados</p><span class="btn bg-warning text-dark">Inscreva-se</span>
+                        </div>
                     </div>
-                </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <a class="text-decoration-none" href="{% url 'cadastrar_voluntario' %}?area=Outras tarefas">
+                    <div class="card card-hover text-white text-center bg-dark-blue pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-clipboard-check"></i>
+                            <h3 class="card-title">Outras Tarefas</h3>
+                            <p class="lead">Não pode ajudar diretamente? Inscreva-se e veja outras formas de ajudar</p><span class="btn bg-warning text-dark">Inscreva-se</span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -115,7 +132,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-12 col-12">
-                <div class="about-img"><img alt="" class="img-fluid" src="{% static 'img/PHOTO-2025-03-13-14-58-03.jpg'%}"></div>
+                <div class="about-img"><a href="https://www.instagram.com/institutomarilugodoi/" target="_blank"><img alt="" class="img-fluid" src="{% static 'img/PHOTO-2025-03-13-14-58-03.jpg'%}"></a></div>
             </div>
         </div>
     </div>
@@ -135,7 +152,7 @@
         </div>
         <div class="row">
             <div class="col-12 col-md-12 col-lg-4">
-                <div class="card text-light text-center bg-white pb-2">
+                <div class="card card-hover text-light text-center bg-white pb-2">
                     <div class="card-body text-dark">
                         <div class="img-area mb-4"><img alt="" class="img-fluid" src="{% static 'img/PHOTO-2025-03-13-15-02-01.jpg' %}"></div>
                         <h3 class="card-title">Linha IMG STORES</h3>
@@ -144,7 +161,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-12 col-lg-4">
-                <div class="card text-light text-center bg-white pb-2">
+                <div class="card card-hover text-light text-center bg-white pb-2">
                     <div class="card-body text-dark">
                         <div class="img-area mb-4"><img alt="" class="img-fluid" src="{% static 'img/PHOTO-2025-03-13-15-02-03 4.jpg' %}"></div>
                         <h3 class="card-title">Vestuário</h3>
@@ -153,7 +170,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-12 col-lg-4">
-                <div class="card text-light text-center bg-white pb-2">
+                <div class="card card-hover text-light text-center bg-white pb-2">
                     <div class="card-body text-dark">
                         <div class="img-area mb-4"><img alt="" class="img-fluid" src="{% static 'img/PHOTO-2025-03-13-15-02-01 2.jpg' %}"></div>
                         <h3 class="card-title">Demais Produtos</h3>
@@ -170,7 +187,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-12 col-12">
-                <div class="about-img"><img alt="" class="img-fluid" src="{% static 'img/nfspONG.jpg' %}"></div>
+                <div class="about-img"><a href="https://shorturl.at/47OxW" target="_blank"><img alt="" class="img-fluid" src="{% static 'img/nfspONG.jpg' %}"></a></div>
             </div>
             <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
                 <div class="about-text">
@@ -178,8 +195,8 @@
                     Nota Fiscal Paulista</h2>
                     <p>A novidade é que a doação, agora, passou a ser automática, de forma rápida, segura e constante. É só seguir os seguintes passos:</pp>
                     <ol>
-                        <li>Acesse o site (www.nfp.fazenda.sp.gov.br) ou aplicativo da Nota Fiscal Paulista.</li>
-                        <li>Cadastre-se ou faça seu login.</li>
+                        <li>Acesse o site <a href="http://www.nfp.fazenda.sp.gov.br" target="_blank">(www.nfp.fazenda.sp.gov.br)</a> ou aplicativo da Nota Fiscal Paulista.</li>
+                        <li>Cadastre-se ou faça seu login usando GOV.BR.</li>
                         <li>Acesse Entidades.</li>
                         <li>Vá em Doação de Cupons com CPF (automática).</li>
                         <li>Coloque o tempo de doação automática que você deseja (de preferência, tempo indeterminado).</li>
@@ -195,7 +212,7 @@
         </div>
     </div>
 </section>
-<!-- nora fiscal section ends -->
+<!-- nota fiscal section ends -->
 <!-- adocao section starts -->
 <section class="about section-padding" id="adocao">
     <div class="container">
@@ -212,68 +229,139 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-12 col-12">
-                <div class="about-img"><img alt="" class="img-fluid" src="{% static 'img/PHOTO-2025-03-13-15-56-58.jpg' %}"></div>
+                <div class="about-img"><a href="https://www.instagram.com/feira_de_adocao_online_img/?igsh=aHNmYnhycDZ5amU1" target="_blank"><img alt="" class="img-fluid" src="{% static 'img/PHOTO-2025-03-13-15-56-58.jpg' %}"></a></div>
             </div>
         </div>
     </div>
 </section>
 <!-- adocao section ends -->
-<!-- team starts -->
+<!-- campanhas starts -->
 <section class="team section-padding" id="team">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="section-header text-center pb-5">
-                    <h2>Nossa Equipe</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur<br>
-                    adipisicing elit. Non, quo.</p>
+                    <h2>Campanhas</h2>
+                    <p>Partice junto com a gente<br>
+                    em uma de nossas campanhas</p>
                 </div>
             </div>
         </div>
+        <div class="row gx-4 gy-4">
+            <div class="col-12 col-md-12 col-lg-4">
+                <a class="text-decoration-none" href="https://shorturl.at/WBNX8" target="_blank">
+                    <div class="card card-hover text-white text-center bg-dark-blue pb-2 h-100">
+                        <div class="card-body">
+                            <!-- <img alt="" class="img-fluid rounded-circle" src="{% static 'img/team-1.jpg' %}"> -->
+                            <h3 class="card-title py-2">Você doa e a gente doa</h3>
+                            <p class="card-text">As rações doadas vão para os animais que estão sob a responsabilidade direta do instituto, para animais de rua, animais resgatados e também para pets de famílias necessitadas (previamente cadastradas).</p>
+                            <span class="btn bg-warning text-dark">Saiba mais</span>
+                            <!-- <p class="socials"><i class="bi bi-twitter text-dark mx-1"></i> <i class="bi bi-facebook text-dark mx-1"></i> <i class="bi bi-linkedin text-dark mx-1"></i> <i class="bi bi-instagram text-dark mx-1"></i></p> -->
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+                <a class="text-decoration-none" href="https://shorturl.at/47OxW" target="_blank">
+                    <div class="card card-hover text-white text-center bg-dark-blue pb-2 h-100">
+                        <div class="card-body">
+                            <!-- <img alt="" class="img-fluid rounded-circle" src="{% static 'img/team-2.jpg' %}"> -->
+                            <h3 class="card-title py-2">Nota Fiscal Paulista</h3>
+                            <p class="card-text">Você doa seus créditos para nossa ONG e ajuda a salvar vidas. Agora o processo de doação ficou mais rápido e simples.</p>
+                            <span class="btn bg-warning text-dark">Saiba mais</span>
+                            <!-- <p class="socials"><i class="bi bi-twitter text-dark mx-1"></i> <i class="bi bi-facebook text-dark mx-1"></i> <i class="bi bi-linkedin text-dark mx-1"></i> <i class="bi bi-instagram text-dark mx-1"></i></p> -->
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+                <a class="text-decoration-none" href="https://shorturl.at/gZVaS" target="_blank">
+                    <div class="card card-hover text-white text-center bg-dark-blue pb-2 h-100">
+                        <div class="card-body">
+                            <!-- <img alt="" class="img-fluid rounded-circle" src="{% static 'img/team-3.jpg' %}"> -->
+                            <h3 class="card-title py-2">Seja Associado Contribuinte</h3>
+                            <p class="card-text">Com apenas 1 real por dia você ajuda a salvar a vida dos bichinhos abandonados. Planos a partir de 30 reais por mês.</p>
+                            <span class="btn bg-warning text-dark">Saiba mais</span>
+                            <!-- <p class="socials"><i class="bi bi-twitter text-dark mx-1"></i> <i class="bi bi-facebook text-dark mx-1"></i> <i class="bi bi-linkedin text-dark mx-1"></i> <i class="bi bi-instagram text-dark mx-1"></i></p> -->
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+                <a class="text-decoration-none" href="https://shorturl.at/iNvDZ" target="_blank">
+                    <div class="card card-hover text-white text-center bg-dark-blue pb-2 h-100">
+                        <div class="card-body">
+                            <!-- <img alt="" class="img-fluid rounded-circle" src="{% static 'img/team-4.jpg' %}""> -->
+                            <h3 class="card-title py-2">Pet Quentinho</h3>
+                            <p class="card-text">Outra campanha anual recolhe doações de cobertores, caminhas, casinhas, roupinhas e outros artigos pets, que são doados a abrigos e lares que acolhem animais carentes. Veja locais de entrega</p>
+                            <span class="btn bg-warning text-dark">Saiba mais</span>
+                            <!-- <p class="socials"><i class="bi bi-twitter text-dark mx-1"></i> <i class="bi bi-facebook text-dark mx-1"></i> <i class="bi bi-linkedin text-dark mx-1"></i> <i class="bi bi-instagram text-dark mx-1"></i></p> -->
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+                <a class="text-decoration-none" href="https://shorturl.at/iNvDZ" target="_blank">
+                    <div class="card card-hover text-white text-center bg-dark-blue pb-2 h-100">
+                        <div class="card-body">
+                            <!-- <img alt="" class="img-fluid rounded-circle" src="{% static 'img/team-4.jpg' %}""> -->
+                            <h3 class="card-title py-2">Campanha de Castração</h3>
+                            <p class="card-text">Oferecer possibilidades à população de castrar seus animais é uma preocupação contínua do IMG. Por isso, oferecemos uma campanha permanente de castração, com preços populares e qualidade no atendimento ao pet. Contato: 12 991598007</p>
+                            <span class="btn bg-warning text-dark">Saiba mais</span>
+                            <!-- <p class="socials"><i class="bi bi-twitter text-dark mx-1"></i> <i class="bi bi-facebook text-dark mx-1"></i> <i class="bi bi-linkedin text-dark mx-1"></i> <i class="bi bi-instagram text-dark mx-1"></i></p> -->
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- campanhas ends -->
+ <!-- FAQs starts -->
+<section class="team section-padding" id="team">
+    <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card text-center">
+            <div class="col-md-12">
+                <div class="section-header text-center pb-5">
+                    <h2>Perguntas Frequentes</h2>
+                    <p>Perguntas e Respostas<br>
+                    mais Frequentes</p>
+                </div>
+            </div>
+        </div>
+        <div class="row gx-4 gy-4">
+            <div class="col-12 col-md-12 col-lg-12">
+                <div class="card text-justify h-100">
                     <div class="card-body">
-                        <img alt="" class="img-fluid rounded-circle" src="{% static 'img/team-1.jpg' %}">
-                        <h3 class="card-title py-2">Jack Wilson</h3>
-                        <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi ipsam nostrum illo tempora esse quibusdam.</p>
-                        <p class="socials"><i class="bi bi-twitter text-dark mx-1"></i> <i class="bi bi-facebook text-dark mx-1"></i> <i class="bi bi-linkedin text-dark mx-1"></i> <i class="bi bi-instagram text-dark mx-1"></i></p>
+                        <h3 class="card-title py-2">Achei um animal. Vocês podem vir resgatar?</h3>
+                        <p class="card-text">Como gostaríamos de atender a todos os pedidos que recebemos diariamente! E são muitos. Acredite: nos corta o coração, mas não temos estrutura física e nem econômica para isso. Somos todos voluntários, inclusive. Muita gente pensa que recebemos verba pública, que temos salário, que nada! Lutamos para tentar aumentar nossa atuação (até latinhas juntamos) e tiramos dinheiro do bolso na maioria das vezes. Mas fazemos de coração.</p>
+                        <p class="card-text">Nós não possuímos gatil e canil para abrigo. Os animais que resgatamos ficam nas nossas próprias casas até a adoção, inclusive com animais doentes e em tratamento. E temos que arcar com todos os custos deles. Para ter ideia, às vezes precisamos recorrer ao hotel pago porque não conseguimos lar hospedeiro voluntário.</p>
+                        <p class="card-text">Caso você consiga um lar temporário, podemos ajudar com DESCONTOS nas clínicas parceiras em consulta, alguns exames, internação, vacinas e até na castração. Creio que isso ajudaria. Estando saudável, podemos divulgar e tb abrir espaço para você leva-lo nas nossas feiras de adoção.</p>
+                        <p class="card-text">Mais uma vez reforçamos que os bichinhos precisam da ajuda de TODA A SOCIEDADE, cada um fazendo um pouquinho. É preciso unir pessoas e criar uma rede de proteção para salvar essa vida! As Ongs sozinhas não conseguem atender a tantos pedidos. Ficamos tristes, mas temos que reconhecer nossos limites financeiros e estruturais. Esperamos que compreenda.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card text-center">
+            <div class="col-12 col-md-12 col-lg-12">
+                <div class="card text-justify h-100">
                     <div class="card-body">
-                        <img alt="" class="img-fluid rounded-circle" src="{% static 'img/team-2.jpg' %}">
-                        <h3 class="card-title py-2">Jack Wilson</h3>
-                        <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi ipsam nostrum illo tempora esse quibusdam.</p>
-                        <p class="socials"><i class="bi bi-twitter text-dark mx-1"></i> <i class="bi bi-facebook text-dark mx-1"></i> <i class="bi bi-linkedin text-dark mx-1"></i> <i class="bi bi-instagram text-dark mx-1"></i></p>
+                        <h3 class="card-title py-2">Preciso doar meu pet. Vocês ajudam?</h3>
+                        <p class="card-text">Podemos divulgar o pet para doação, porém, ele precisa estar sadio e só postamos animais castrados (a partir da idade recomendada), vermifugados e com protocolo vacinal em dia (dentro das normas recomendadas).</p>
+                        <p class="card-text">Por isso, oferecemos descontos em clínicas, nesses serviços, para ajudar quem está cuidando do bichinho a providenciar isso.</p>
+                        <p class="card-text">Também podemos abrir espaço para você leva-lo nas nossas feiras de adoção, aos sábados, mas as regras são as mesmas. Infelizmente, o abandono está numa crescente na cidade, assim como a maldade humana.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card text-center">
+            <div class="col-12 col-md-12 col-lg-12">
+                <div class="card text-justify h-100">
                     <div class="card-body">
-                        <img alt="" class="img-fluid rounded-circle" src="{% static 'img/team-3.jpg' %}">
-                        <h3 class="card-title py-2">Jack Wilson</h3>
-                        <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi ipsam nostrum illo tempora esse quibusdam.</p>
-                        <p class="socials"><i class="bi bi-twitter text-dark mx-1"></i> <i class="bi bi-facebook text-dark mx-1"></i> <i class="bi bi-linkedin text-dark mx-1"></i> <i class="bi bi-instagram text-dark mx-1"></i></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <img alt="" class="img-fluid rounded-circle" src="{% static 'img/team-4.jpg' %}"">
-                        <h3 class="card-title py-2">Jack Wilson</h3>
-                        <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi ipsam nostrum illo tempora esse quibusdam.</p>
-                        <p class="socials"><i class="bi bi-twitter text-dark mx-1"></i> <i class="bi bi-facebook text-dark mx-1"></i> <i class="bi bi-linkedin text-dark mx-1"></i> <i class="bi bi-instagram text-dark mx-1"></i></p>
+                        <h3 class="card-title py-2">Adotei um Pet. Vocês têm algum material de orientação para me ajudar?</h3>
+                        <p class="card-text">Sim. Temos uma cartilha de orientação muito legal e importante para o bem-estar dos bichinhos. Clique e confira: <a href="https://issuu.com/marilugodoi/docs/cartilha_guiadeanimal_final_aorta__2_">Um Guia Animal</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- team ends -->
+<!-- FAQs ends -->
 
 {% endblock %}

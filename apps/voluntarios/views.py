@@ -2,19 +2,32 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.contrib.messages import get_messages
+from django.core.mail import send_mail
+from django.conf import settings
 
 # Create your views here.
 # Views 1: enviar dados do formulário para o bd
 from .forms import VoluntarioForm
 
 def cadastrar_voluntario(request):
+    area_selecionada = request.GET.get('area')  # Pega a área da URL
+
     if request.method == 'POST':
         form = VoluntarioForm(request.POST)
         if form.is_valid():
-            form.save()
+            voluntario = form.save()
+            # Envio de e-mail
+            send_mail(
+                'Novo Voluntário Cadastrado',  # Assunto
+                f'O voluntário {voluntario.nome} ({voluntario.email}) foi cadastrado com sucesso na área {voluntario.area}!',  # Corpo do e-mail
+                settings.EMAIL_HOST_USER,  # De
+                ['filipedomiciano@gmail.com', 'institutomarilugodoi18@gmail.com'],  # Para quem enviar
+                fail_silently=True,
+            )
             return redirect('voluntario_sucesso')  # redireciona após cadastro
     else:
-        form = VoluntarioForm()
+        form = VoluntarioForm(initial={'area': area_selecionada})
     
     return render(request, 'voluntarios/voluntarios.html', {'form': form})
 
@@ -47,6 +60,10 @@ def listar_voluntarios(request):
 
 # Views 3: login e logout
 def login_view(request):
+    # Limpa mensagens herdadas de redirects anteriores
+    if request.method == 'GET':
+      list(get_messages(request))  # Consome completamente as mensagens pendentes
+
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']

@@ -55,7 +55,6 @@
             <th>Endereço</th>
             <th>Cidade</th>
             <th>Área</th>
-            <th>ID</th>
             <th><a href="{% url 'cadastrar_voluntario' %}" class="btn btn-success btn-sm">➕ Novo Voluntário</a></th>
           </tr>
         </thead>
@@ -68,7 +67,6 @@
               <td>{{ v.endereco }}</td>
               <td>{{ v.get_cidade_display|default:v.cidade }}</td>
               <td>{{ v.get_area_display|default:v.area }}</td>
-              <td>{{ v.id }}</td>
               <td>{% if v.id %}<a href="{% url 'editar_voluntario' v.id %}" class="btn btn-warning btn-sm">✏️ Editar</a>{% else %}<span class="text-muted">ID inválido</span>{% endif %} <a href="{% url 'excluir_voluntario' v.id %}" class="btn btn-danger btn-sm">🗑️ Excluir</a></td>
             </tr>
           {% endfor %}

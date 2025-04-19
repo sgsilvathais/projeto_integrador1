@@ -17,8 +17,9 @@ class VoluntarioForm(forms.ModelForm):
                 ('Taubaté', 'Taubaté'),
             ]),
             'area': forms.RadioSelect(choices=[
-                ('Feira de adoção', 'Feira de adoção'),
+                ('Evento de adoção', 'Evento de adoção'),
                 ('Cuidados e Bem-Estar', 'Cuidados e Bem-Estar'),
+                ('Associado', 'Associado'),
                 ('Outras tarefas', 'Outras tarefas'),
             ]),
         }
