@@ -22,3 +22,4 @@ __pycache__/
 
 # Arquivos de logs
 *.log
+.env
