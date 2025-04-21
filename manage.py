@@ -3,20 +3,20 @@
 import os
 import sys
 
-
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ong.settings')
     try:
         from django.core.management import execute_from_command_line
-	import django
+
+        import django
         django.setup()
         from django.contrib.auth import get_user_model
 
         User = get_user_model()
         if not User.objects.filter(username="admin").exists():
-            User.objects.create_superuser("admin", "frdestudos@gmail.com", "admin123")
-            print("✅ Superusuário 'admin' criado com sucesso.")
+            User.objects.create_superuser("admin", "frdestudos@egmail.com", "admin123")
+            print("Superusuário 'admin' criado com sucesso.")
 
     except ImportError as exc:
         raise ImportError(
@@ -24,8 +24,8 @@ def main():
             "available on your PYTHONPATH environment variable? Did you "
             "forget to activate a virtual environment?"
         ) from exc
-    execute_from_command_line(sys.argv)
 
+    execute_from_command_line(sys.argv)
 
 if __name__ == '__main__':
     main()
