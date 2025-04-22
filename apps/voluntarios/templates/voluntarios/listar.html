@@ -32,8 +32,9 @@
       <label for="area" class="form-label">Filtrar por Área:</label>
       <select name="area" id="area" class="form-select">
         <option value="">Todas</option>
-        <option value="Feira de adoção" {% if area_selecionada == "Feira de adoção" %}selected{% endif %}>Feira de adoção</option>
+        <option value="Evento de adoção" {% if area_selecionada == "Evento de adoção" %}selected{% endif %}>Evento de adoção</option>
         <option value="Cuidados e Bem-Estar" {% if area_selecionada == "Cuidados e Bem-Estar" %}selected{% endif %}>Cuidados e Bem-Estar</option>
+        <option value="Associado" {% if area_selecionada == "Associado" %}selected{% endif %}>Associado</option>
         <option value="Outras tarefas" {% if area_selecionada == "Outras tarefas" %}selected{% endif %}>Outras tarefas</option>
       </select>
     </div>

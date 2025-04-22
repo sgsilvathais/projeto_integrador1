@@ -22,7 +22,7 @@ def cadastrar_voluntario(request):
                 'Novo Voluntário Cadastrado',  # Assunto
                 f'O voluntário {voluntario.nome} ({voluntario.email}) foi cadastrado com sucesso na área {voluntario.area}!',  # Corpo do e-mail
                 settings.EMAIL_HOST_USER,  # De
-                ['filipedomiciano@gmail.com', 'institutomarilugodoi18@gmail.com'],  # Para quem enviar
+                ['frdestudos@gmail.com', 'institutomarilugodoi18@gmail.com'],  # Para quem enviar 'institutomarilugodoi18@gmail.com'
                 fail_silently=True,
             )
             return redirect('voluntario_sucesso')  # redireciona após cadastro
