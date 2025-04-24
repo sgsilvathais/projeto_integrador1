@@ -49,11 +49,14 @@ def listar_voluntarios(request):
 
     if area:
         voluntarios = voluntarios.filter(area=area)
+    
+    voluntarios_count = voluntarios.count()
 
     context = {
         'voluntarios': voluntarios,
         'cidade_selecionada': cidade,
         'area_selecionada': area,
+        'voluntarios_count': voluntarios_count,
     }
 
     return render(request, 'voluntarios/listar.html', context)
