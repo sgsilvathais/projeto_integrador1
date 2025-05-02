@@ -150,4 +150,16 @@ body {
 	.card {
 		margin-bottom: 30px;
 	}
+	/* Ajusta o tamanho da fonte da navbar em telas menores*/
+	.navbar-light .navbar-brand {
+		font-size: 18px; /* Ajuste o tamanho conforme necessário */
+	}
+	/* Ajusta o tamanho da img no carousel em telas menores*/
+	.carousel-item {
+		height: auto;
+		min-height: 300px;
+	}
+	.w-100 {
+		height: 45vh;
+	}
 }
