@@ -23,8 +23,8 @@ body {
 	margin-top: 25px;
 }
 .carousel-caption p {
-	width: 40%;
-	margin: auto;
+	/*width: 40%;
+	margin: auto;*/
 	font-size: 18px;
 	line-height: 1.9;
 }
