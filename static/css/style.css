@@ -9,11 +9,11 @@ body {
 	padding: 100px 0;
 }
 .carousel-item {
-	height: 100vh;
+	height: auto;
 	/*min-height: 300px;*/
 }
 .carousel-caption {
-	bottom: 220px;
+	bottom: 50px;
 	z-index: 2;
 }
 .carousel-caption h5 {
@@ -130,7 +130,7 @@ body {
 		text-align: center;
 	}
 	.carousel-caption {
-		bottom: 50px;
+		bottom: 5px;
 	}
 	.carousel-caption h5 {
 		font-size: 17px;
@@ -156,7 +156,6 @@ body {
 	}
 	/* Ajusta o tamanho da img no carousel em telas menores*/
 	.carousel-item {
-		height: auto;
 		padding-top: 40px;
 		/*min-height: 300px;*/
 	}
