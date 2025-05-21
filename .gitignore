@@ -1,0 +1,25 @@
+# Ambiente virtual
+venv/
+
+# Arquivos de configuração do sistema operacional (ex: macOS, Windows)
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração do editor (ex: VSCode)
+.vscode/
+
+# Arquivos gerados pelo Django
+db.sqlite3
+/static/
+/staticfiles/
+
+# Arquivos de configuração do ambiente
+.env
+
+# Arquivos de cache Python
+__pycache__/
+*.pyc
+
+# Arquivos de logs
+*.log
+.env
